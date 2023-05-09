@@ -27,6 +27,7 @@ function bootstrap() {
   intitFirebaseDatabase();
 }
 
+// create table
 function createTable(rows, columns) {
   const table = document.getElementById('table');
 
@@ -66,7 +67,7 @@ function intitFirebaseDatabase() {
     const data = snapshot.val();
 
     // Construct css style rules for each cell
-    let styles = ''
+    let styles = '';
     for (let row of Object.keys(data)) {
       for (let column of Object.keys(data[row])) {
         const cellColor = data[row][column]
